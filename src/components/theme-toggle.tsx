@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 interface ThemeToggleProps {
-    mode: string;
+    mode: 'light' | 'dark';
 }
 
 export default function ThemeToggle({ mode }: ThemeToggleProps) {
