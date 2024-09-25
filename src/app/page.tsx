@@ -39,11 +39,10 @@ const HomePage = () => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
-
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-4xl font-bold mb-8 text-center">Blog </h1>
-      <ThemeToggle mode="light" />
+      <ThemeToggle mode="flex justify-end mb-2" />
       {/* Arama Çubuğu */}
       <div className="mb-8 text-center">
         <Input

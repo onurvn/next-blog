@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from "next-themes";
+import { Suspense } from "react";
 
 const inter = Inter({
   subsets: ['latin']
@@ -20,14 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className="bg-white text-black dark:bg-zinc-950 dark:text-white">
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Suspense>
             {children}
-          </ThemeProvider>
+          </Suspense>
+        </ThemeProvider>
       </body>
     </html>
   );

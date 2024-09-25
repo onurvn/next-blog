@@ -12,13 +12,14 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-interface ThemeToggleProps {
-    mode: 'light' | 'dark';
+
+type ThemeToggleProps = {
+    mode: string;
 }
 
 export default function ThemeToggle({ mode }: ThemeToggleProps) {
     const { setTheme } = useTheme();
-    
+
     return (
         <div className={mode}>
             <DropdownMenu >
